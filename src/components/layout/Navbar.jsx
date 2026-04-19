@@ -199,7 +199,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
   { label: "Services",  href: "#services",  dropdown: true },
-  { label: "Guarantee", href: "#guarantee", dropdown: false },
+  { label: "Guarantee", href: "/guarantee", dropdown: false },
   { label: "Listings",  href: "#listings",  dropdown: false },
 ];
 
