@@ -1,16 +1,95 @@
-# React + Vite
+# MovEazy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern rental and moving platform built with React. MovEazy helps users find apartments, compare moving services, and access a deposit-free guarantee — all in one place.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** with React Router v7
+- **Vite** — fast dev server and build tool
+- **Tailwind CSS** — utility-first styling
+- **Framer Motion** — animations
+- **Leaflet / React-Leaflet** — interactive maps
+- **Lucide React** — icons
 
-## React Compiler
+## Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Node.js](https://nodejs.org/) v18 or higher
+- npm (comes with Node.js)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/navyagurugubelli/moveazy.git
+cd moveazy
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` (default Vite port).
+
+## Available Scripts
+
+| Command             | Description                                |
+| ------------------- | ------------------------------------------ |
+| `npm run dev`       | Start the development server with HMR      |
+| `npm run build`     | Build for production (outputs to `dist/`)  |
+| `npm run preview`   | Preview the production build locally       |
+| `npm run lint`      | Run ESLint across the project              |
+
+## Project Structure
+
+```
+src/
+├── assets/            # Images, icons, logos
+├── components/
+│   ├── layout/        # Navbar, Footer
+│   └── sections/      # Reusable page sections (Hero, Features, Stats, etc.)
+├── hooks/             # Custom React hooks (useScrollAnimation)
+├── pages/             # Route-level pages
+│   ├── Home.jsx
+│   ├── Services.jsx
+│   ├── Listings.jsx
+│   └── Guarantee.jsx
+├── App.jsx            # Router setup
+├── main.jsx           # Entry point
+└── index.css          # Global styles + Tailwind directives
+```
+
+## Pages
+
+| Route         | Page        | Description                              |
+| ------------- | ----------- | ---------------------------------------- |
+| `/`           | Home        | Landing page with hero, features, stats  |
+| `/services`   | Services    | Moving services overview and comparison  |
+| `/listings`   | Listings    | Apartment listings with smart matching   |
+| `/guarantee`  | Guarantee   | Deposit-free guarantee plans and FAQ     |
+
+## Building for Production
+
+```bash
+npm run build
+```
+
+The optimized output will be in the `dist/` directory. You can deploy this to any static hosting provider (Vercel, Netlify, GitHub Pages, etc.).
+
+To preview the build locally:
+
+```bash
+npm run preview
+```
+
+## License
+
+This project is private.
