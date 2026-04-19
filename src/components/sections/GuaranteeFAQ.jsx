@@ -1,24 +1,25 @@
 // src/components/sections/GuaranteeFAQ.jsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import consultantImg from "../../assets/images/guarentee-consultant.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
 const FAQS = [
   {
-    q: "What Exactly Is Moveasy Guarantee?",
-    a: "Moveasy Guarantee is a protection plan that helps you avoid illegal security deposit deductions during move-out. It works with legal and operational support to audit your rental agreement, document the property condition, and negotiate directly with your landlord if any unfair charges arise.",
+    q: "What Exactly Is Moveazy Guarantee?",
+    a: "Moveazy Guarantee is a protection plan that helps you avoid illegal security deposit deductions during move-out. It works with legal and operational support to audit your rental agreement, document the property condition, and negotiate directly with your landlord if any unfair charges arise.",
   },
   {
-    q: "How Does Moveasy Protect My Deposit?",
+    q: "How Does Moveazy Protect My Deposit?",
     a: "We protect your deposit through a three-step Structural Shield process: legal audit of your contract, comprehensive photo and document verification of the property, and direct legal negotiation with your landlord to dispute any invalid deductions.",
   },
   {
     q: "What If The Owner Still Refuses To Return My Deposit?",
-    a: "If your landlord refuses to comply after our negotiation, Moveasy will escalate the matter through legal channels. We provide binding contract documentation and evidence gathered during the move-in/move-out inspection to back your claim.",
+    a: "If your landlord refuses to comply after our negotiation, Moveazy will escalate the matter through legal channels. We provide binding contract documentation and evidence gathered during the move-in/move-out inspection to back your claim.",
   },
   {
-    q: "When Should I Take The Moveasy Guarantee Plan?",
+    q: "When Should I Take The Moveazy Guarantee Plan?",
     a: "Ideally, subscribe before or at the time of signing your rental agreement. This gives us time to audit the contract and establish a baseline property condition record. However, you can also subscribe during your tenancy or at move-out to still get protection.",
   },
   {
@@ -123,7 +124,7 @@ export default function GuaranteeFAQ() {
               <div className="flex flex-col gap-3">
                 <div className="w-14 h-14 rounded-full flex-shrink-0 overflow-hidden border border-gray-100">
                   <img
-                    src="/src/assets/images/guarentee-consultant.png"
+                    src={consultantImg}
                     alt="Consultation advisor"
                     className="w-full h-full object-cover object-top"
                     draggable={false}

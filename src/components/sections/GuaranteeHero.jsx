@@ -1,5 +1,8 @@
 // src/components/sections/GuaranteeHero.jsx
 import { motion } from "framer-motion";
+import keyhandoverImg from "../../assets/images/guarentee-keyhandover.jpg";
+import depositImg from "../../assets/images/guarentee-deposit.png";
+import disputeImg from "../../assets/images/guarentee-dispute.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -62,7 +65,7 @@ export default function GuaranteeHero() {
                 </button>
               </div>
               <p className="text-[12.5px] text-gray-400">
-                Backed by Legal Support &amp; Moveasy Team
+                Backed by Legal Support &amp; Moveazy Team
               </p>
             </motion.div>
 
@@ -82,7 +85,7 @@ export default function GuaranteeHero() {
               <div>
                 <p className="text-[13px] font-bold text-[#1E2A3A]">100% Protection Focus</p>
                 <p className="mt-0.5 text-[11.5px] text-gray-400 max-w-[160px] leading-[1.5]">
-                  Moveasy Prioritises Protecting Your Security Deposit With Structured Support And Legal Backing
+                  Moveazy Prioritises Protecting Your Security Deposit With Structured Support And Legal Backing
                 </p>
               </div>
             </motion.div>
@@ -149,7 +152,7 @@ export default function GuaranteeHero() {
               >
                 <div className="w-[55%] rounded-[16px] overflow-hidden shadow-[0_12px_36px_rgba(0,0,0,0.12)] bg-[#f5f0eb]">
                   <img
-                    src="/src/assets/images/guarentee-keyhandover.jpg"
+                    src={keyhandoverImg}
                     alt="Tenant handing over keys"
                     className="w-full h-auto object-contain"
                     draggable={false}
@@ -185,7 +188,7 @@ export default function GuaranteeHero() {
               >
                 <div className="drop-shadow-xl" style={​{ width: "100px" }}>
                   <img
-                    src="/src/assets/images/guarentee-deposit.png"
+                    src={depositImg}
                     alt="100% Deposit Return Guarantee"
                     className="w-full h-auto"
                     draggable={false}
@@ -221,7 +224,7 @@ export default function GuaranteeHero() {
               >
                 <div className="w-[90%] rounded-[16px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.14)]">
                   <img
-                    src="/src/assets/images/guarentee-dispute.png"
+                    src={disputeImg}
                     alt="MoveAZY agent mediating a deposit dispute"
                     className="w-full h-auto object-cover"
                     draggable={false}

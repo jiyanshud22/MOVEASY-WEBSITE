@@ -13,6 +13,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import logoSvg from "../../assets/logo/moveasy.svg";
 import { MapPin } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1];
@@ -161,7 +162,7 @@ export default function SmartMatch() {
             {/* Card header: logo + Smart Match label */}
             <div className="flex items-center gap-3 mb-7">
               <img
-                src="/src/assets/logo/moveasy.svg"
+                src={logoSvg}
                 alt="MovEASY"
                 className="h-7 w-auto"
               />

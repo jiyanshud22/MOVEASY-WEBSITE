@@ -10,7 +10,7 @@ import GuaranteeEnrollCTA from "../components/sections/GuaranteeEnrollCTA";
 
 export default function Guarantee() {
   return (
-    <div className="min-h-screen bg-white antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-white antialiased">
       <Navbar />
 
       <main className="relative">

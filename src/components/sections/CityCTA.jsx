@@ -10,6 +10,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import cityBg from "../../assets/images/city-bg.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -36,7 +37,7 @@ export default function CityCTA() {
         >
           {/* Background image */}
           <img
-            src="/src/assets/images/city-bg.png"
+            src={cityBg}
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-center select-none"
@@ -81,7 +82,7 @@ export default function CityCTA() {
             >
               Stop wasting time on listings, confusion, and unreliable brokers.
               <br className="hidden sm:block" />
-              Moveasy helps you find the right home faster — with complete clarity and protection.
+              Moveazy helps you find the right home faster — with complete clarity and protection.
             </motion.p>
 
             <motion.div

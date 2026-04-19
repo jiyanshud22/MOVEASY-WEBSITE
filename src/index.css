@@ -32,19 +32,18 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 
   body {
     font-family: "Inter", sans-serif;
     color: #0a0a0a;
     background-color: #ffffff;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: visible;
   }
 
   #root {
-    overflow-x: hidden;
+    overflow: visible;
   }
 
   /* Prevent accidental nested horizontal scroll */

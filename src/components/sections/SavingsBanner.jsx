@@ -1,5 +1,6 @@
 // src/components/sections/SavingsBanner.jsx
 import { motion } from "framer-motion";
+import guaranteeBg from "../../assets/images/guarantee-bg.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -47,7 +48,7 @@ export default function SavingsBanner() {
     <section className="relative w-full overflow-hidden">
       {/* Background image */}
       <img
-        src="/src/assets/images/guarantee-bg.png"
+        src={guaranteeBg}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-center select-none"
@@ -80,7 +81,7 @@ export default function SavingsBanner() {
             transition={​{ duration: 0.6, delay: 0.1, ease: EASE }}
             className="mt-3 text-[14.5px] sm:text-[15.5px] text-white/70"
           >
-            Average savings realized per move-out through Moveasy intervention.
+            Average savings realized per move-out through Moveazy intervention.
           </motion.p>
 
           {/* Chips */}

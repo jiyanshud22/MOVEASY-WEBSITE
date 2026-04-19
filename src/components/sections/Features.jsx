@@ -1,29 +1,30 @@
 // src/components/sections/Features.jsx
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import userMaleIcon from "../../assets/icons/user-male.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
 const FEATURES = [
   {
-    icon: "/src/assets/icons/user-male.png",
+    icon: userMaleIcon,
     title: "Personalized City Guidance",
     desc: "We help you understand the city, best areas, commute realities, and what truly fits your lifestyle before you even start.",
   },
   {
-    icon: "/src/assets/icons/user-male.png",
+    icon: userMaleIcon,
     title: "Broker-Matched, Not Listing-Based",
     desc: "Skip outdated platforms. We connect you directly with trusted brokers who have real-time, high-quality properties.",
   },
   {
-    icon: "/src/assets/icons/user-male.png",
+    icon: userMaleIcon,
     title: "Faster Home Finalization",
     desc: "Get curated options, quick site visits, and close deals before the best homes disappear.",
   },
   {
-    icon: "/src/assets/icons/user-male.png",
+    icon: userMaleIcon,
     title: "Deposit Protection Guaranteed",
-    desc: "Avoid unfair deductions with our Moveasy Guarantee — legal support that ensures you get your money back.",
+    desc: "Avoid unfair deductions with our Moveazy Guarantee — legal support that ensures you get your money back.",
   },
 ];
 
@@ -43,7 +44,7 @@ export default function Features() {
           transition={{ duration: 0.6, ease: EASE }}
         >
           <h2 className="text-[30px] sm:text-[38px] lg:text-[44px] font-extrabold text-gray-950 leading-[1.15] tracking-tight">
-            Thousands Are Moving Smarter with Moveasy
+            Thousands Are Moving Smarter with Moveazy
           </h2>
         </motion.div>
 

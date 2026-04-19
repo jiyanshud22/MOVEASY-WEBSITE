@@ -9,6 +9,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import guaranteeBg from "../../assets/images/guarantee-bg.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -34,7 +35,7 @@ export default function GuaranteePlan() {
         >
           {/* Wavy red gradient background image */}
           <img
-            src="/src/assets/images/guarantee-bg.png"
+            src={guaranteeBg}
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-center select-none"

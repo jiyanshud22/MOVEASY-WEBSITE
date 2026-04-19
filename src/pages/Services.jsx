@@ -2,23 +2,28 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import ServicesHero from "../components/sections/ServicesHero";
 import StorySection from "../components/sections/StorySection";
-import ServiceRecap from "../components/sections/ServiceRecap";
 import CoreValues from "../components/sections/CoreValues";
+import ServicesTimeline from "../components/sections/ServicesTimeline";
+import BuiltMoveazy from "../components/sections/BuiltMoveazy";
+import ServiceRecap from "../components/sections/ServiceRecap";
 import ServicesCTA from "../components/sections/ServicesCTA";
+
 export default function Services() {
-    return (
-        <div className="min-h-screen bg-white antialiased overflow-x-hidden">
-            <Navbar />
+  return (
+    <div className="min-h-screen bg-white antialiased">
+      <Navbar />
 
-            <main className="relative">
-                <ServicesHero />
-                <StorySection />
-                <CoreValues />
-                <ServiceRecap />
-                <ServicesCTA />
-            </main>
+      <main className="relative">
+        <ServicesHero />
+        <StorySection />
+        <CoreValues />
+        <ServicesTimeline />
+        <BuiltMoveazy />
+        <ServiceRecap />
+        <ServicesCTA />
+      </main>
 
-            <Footer />
-        </div>
-    );
+      <Footer />
+    </div>
+  );
 }

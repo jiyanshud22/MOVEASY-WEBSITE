@@ -1,6 +1,7 @@
 // src/components/sections/GuaranteeEnrollCTA.jsx
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import secureDepositImg from "../../assets/images/guarentee-secure-deposit.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -22,7 +23,7 @@ export default function GuaranteeEnrollCTA() {
         >
           {/* Background — woman at laptop photo */}
           <img
-            src="/src/assets/images/guarentee-secure-deposit.png"
+            src={secureDepositImg}
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-center select-none"

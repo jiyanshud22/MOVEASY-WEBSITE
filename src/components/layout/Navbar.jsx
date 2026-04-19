@@ -194,18 +194,30 @@
 // }
 // src/components/layout/Navbar.jsx
 import { useState, useEffect } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { ChevronDown, Menu, X, LogOut, User } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoSvg from "../../assets/logo/moveasy.svg";
+import { useAuth } from "../../context/AuthContext";
 
 const NAV_LINKS = [
-  { label: "Services",  href: "#services",  dropdown: true },
+  { label: "Services",  href: "/services",  dropdown: false },
   { label: "Guarantee", href: "/guarantee", dropdown: false },
-  { label: "Listings",  href: "#listings",  dropdown: false },
+  { label: "Listings",  href: "/listings",   dropdown: false },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled,   setScrolled]   = useState(false);
+  const { user, profile, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
+
+  const displayName = profile?.name || user?.displayName || user?.email || "";
 
   useEffect(() => {
     const onResize = () => { if (window.innerWidth >= 1024) setMobileOpen(false); };
@@ -233,7 +245,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="/" className="flex-shrink-0">
-            <img src="/src/assets/logo/moveasy.svg" alt="MovEASY" className="h-9 w-auto" />
+            <img src={logoSvg} alt="MovEASY" className="h-9 w-auto" />
           </a>
 
           {/* Desktop nav */}
@@ -255,9 +267,28 @@ export default function Navbar() {
             <button className="px-5 py-[9px] text-[13.5px] font-semibold text-gray-950 border-[1.5px] border-gray-950 rounded-full hover:bg-gray-950 hover:text-white active:scale-[0.97] transition-all duration-200">
               Book A Consultation
             </button>
-            <button className="px-5 py-[9px] text-[13.5px] font-semibold text-white bg-[#EF4444] rounded-full hover:bg-[#DC2626] active:scale-[0.97] transition-all duration-200">
-              Login
-            </button>
+            {user ? (
+              <div className="flex items-center gap-2">
+                <span className="flex items-center gap-1.5 text-[13.5px] font-medium text-gray-700">
+                  <User size={15} className="text-gray-400" />
+                  {displayName}
+                </span>
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center gap-1.5 px-4 py-[9px] text-[13.5px] font-semibold text-gray-600 border-[1.5px] border-gray-300 rounded-full hover:bg-gray-100 active:scale-[0.97] transition-all duration-200"
+                >
+                  <LogOut size={14} />
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="px-5 py-[9px] text-[13.5px] font-semibold text-white bg-[#EF4444] rounded-full hover:bg-[#DC2626] active:scale-[0.97] transition-all duration-200"
+              >
+                Login
+              </Link>
+            )}
           </div>
 
           {/* Mobile hamburger */}
@@ -309,9 +340,29 @@ export default function Navbar() {
                 <button className="w-full py-3 text-sm font-semibold text-gray-950 border-[1.5px] border-gray-950 rounded-full hover:bg-gray-950 hover:text-white transition-all">
                   Book A Consultation
                 </button>
-                <button className="w-full py-3 text-sm font-semibold text-white bg-[#EF4444] rounded-full hover:bg-[#DC2626] transition-all">
-                  Login
-                </button>
+                {user ? (
+                  <>
+                    <div className="flex items-center gap-2 py-2 text-sm font-medium text-gray-700">
+                      <User size={15} className="text-gray-400" />
+                      {displayName}
+                    </div>
+                    <button
+                      onClick={() => { handleLogout(); setMobileOpen(false); }}
+                      className="w-full py-3 text-sm font-semibold text-gray-600 border-[1.5px] border-gray-300 rounded-full hover:bg-gray-100 transition-all flex items-center justify-center gap-1.5"
+                    >
+                      <LogOut size={14} />
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <Link
+                    to="/login"
+                    onClick={() => setMobileOpen(false)}
+                    className="w-full py-3 text-sm font-semibold text-white bg-[#EF4444] rounded-full hover:bg-[#DC2626] transition-all text-center block"
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           </motion.div>

@@ -1,17 +1,50 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Listings from "./pages/Listings";
 import Guarantee from "./pages/Guarantee";
+import Login from "./pages/Login";
+import Onboarding from "./pages/Onboarding";
+
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/listings" element={<Listings />} />
-        <Route path="/guarantee" element={<Guarantee />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          {/* Public routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+
+          {/* Protected routes */}
+          <Route
+            path="/services"
+            element={
+              <ProtectedRoute>
+                <Services />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/listings"
+            element={
+              <ProtectedRoute>
+                <Listings />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/guarantee"
+            element={
+              <ProtectedRoute>
+                <Guarantee />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

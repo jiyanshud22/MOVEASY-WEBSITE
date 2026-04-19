@@ -49,7 +49,7 @@
 //               className="mt-6 text-[16px] text-gray-500 leading-[1.82] max-w-[440px]"
 //             >
 //               Relocation isn't just about moving boxes; it's about starting a
-//               new chapter. Moveasy simplifies the journey through empathy,
+//               new chapter. Moveazy simplifies the journey through empathy,
 //               technology, and a deep understanding of what makes a place feel
 //               like home.
 //             </motion.p>
@@ -121,7 +121,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function ServicesHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16">
+    <section className="relative w-full overflow-hidden bg-white pt-24 sm:pt-28 lg:pt-32 pb-14 sm:pb-16">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
           {/* LEFT CONTENT */}
@@ -166,7 +166,7 @@ export default function ServicesHero() {
               "
             >
               Relocation isn't just about moving boxes; it's about starting a
-              new chapter. Moveasy simplifies the journey through empathy,
+              new chapter. Moveazy simplifies the journey through empathy,
               technology, and a deep understanding of what makes a place feel
               like home.
             </motion.p>

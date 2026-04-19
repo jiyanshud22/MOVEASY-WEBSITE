@@ -1,25 +1,28 @@
 // src/components/sections/HowItWorks.jsx
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import consultationIcon from "../../assets/icons/consultation.png";
+import realEstateAgentIcon from "../../assets/icons/real-estate-agent.png";
+import protectIcon from "../../assets/icons/protect.png";
 
 const EASE = [0.22, 1, 0.36, 1];
 
 const STEPS = [
   {
     number: "1",
-    icon: "/src/assets/icons/consultation.png",
+    icon: consultationIcon,
     title: "Understand You",
     desc: "Tell us your office location, budget, lifestyle, and preferences. We guide you on the best areas, commute realities, and trade-offs.",
   },
   {
     number: "2",
-    icon: "/src/assets/icons/real-estate-agent.png",
+    icon: realEstateAgentIcon,
     title: "Get Matched to the Right Brokers",
     desc: "We connect you with trusted brokers who have real-time, high-quality properties. No outdated listings. No endless scrolling.",
   },
   {
     number: "3",
-    icon: "/src/assets/icons/protect.png",
+    icon: protectIcon,
     title: "Close Fast & Stay Protected",
     desc: "We help you finalize quickly and protect your security deposit with legal support.",
   },

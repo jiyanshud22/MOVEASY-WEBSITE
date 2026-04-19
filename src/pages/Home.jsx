@@ -12,7 +12,7 @@ import Footer from "../components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-white antialiased">
       <Navbar />
 
       <main className="relative">

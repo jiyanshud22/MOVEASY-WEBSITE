@@ -24,3 +24,11 @@ dist-ssr
 *.sw?
 .opencode
 openspec
+
+# Firebase
+firebase-debug.log
+.firebase/
+
+# Environment
+.env
+.env.local

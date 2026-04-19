@@ -1,4 +1,5 @@
 // src/components/layout/Footer.jsx
+import logoSvg from "../../assets/logo/moveasy.svg";
 // ─────────────────────────────────────────────────────────────────────────────
 // Footer — exactly matches Figma design
 //
@@ -49,13 +50,13 @@ export default function Footer() {
           <div className="flex flex-col gap-1.5">
             <a href="/" className="inline-block">
               <img
-                src="/src/assets/logo/moveasy.svg"
+                src={logoSvg}
                 alt="MovEASY"
                 className="h-8 w-auto"
               />
             </a>
             <p className="text-[11.5px] text-gray-400 uppercase tracking-wide font-medium">
-              © 2024 Moveasy Architectural Relocation. All Rights Reserved.
+              © 2024 Moveazy Architectural Relocation. All Rights Reserved.
             </p>
           </div>
 
